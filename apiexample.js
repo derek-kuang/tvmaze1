@@ -1,4 +1,4 @@
-let apiURL = 'http://api.tvmaze.com/';
+let apiURL = 'https://api.tvmaze.com/';
 
 
 
