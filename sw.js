@@ -9,6 +9,7 @@ self.addEventListener('install', function(event) {
         'style.css',
         'apiexample.js',
         'manifest.json',
+        'sw.js',
         'icons/icon512_rounded.png',
         'icons/icon512_maskable.png',
         'tv.jpg'
@@ -35,6 +36,7 @@ const STATIC_ASSETS = [
   './index.html',
   './style.css',
   './apiexample.js',
+  './sw.js',
   'icons/icon512_rounded.png',        
   'icons/icon512_maskable.png',
   'tv.jpg'
