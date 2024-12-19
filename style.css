@@ -27,7 +27,7 @@
 body{
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(tv.jpg) no-repeat center center fixed;
   background-size: cover;
-
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
@@ -99,6 +99,10 @@ body{
     transform: translate(-50%, -50%);
 }
 
+#installButton{
+  width: 150px;
+  background-color: red;
+}
 
 #title{
   text-align: center;
@@ -114,7 +118,7 @@ body{
 
 #main{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  max-width: 550px;
+  min-width: 550px;
   margin: auto;
   padding: 15px;
 }
@@ -133,7 +137,6 @@ body{
 #main a:hover{
   color: black;
 }
-
 
 
 
