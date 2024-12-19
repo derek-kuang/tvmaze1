@@ -14,6 +14,39 @@ window.onload = function() {
    };
 } // window.onload
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      console.log('Service Worker registered with scope:', registration.scope);
+    }, function(error) {
+      console.log('Service Worker registration failed:', error);
+    });
+  });
+}      
+
+// handle install prompt
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  const installButton = document.getElementById('installButton');
+  installButton.style.display = 'block';
+
+  installButton.addEventListener('click', () => {
+    installButton.style.display = 'none';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});           
 
 // get data from TV Maze
 async function searchTvShows() {
@@ -193,6 +226,7 @@ function showLightBox(episodeId){
 
 
 
+
  // close the lightbox
  function closeLightBox(){
      document.getElementById("lightbox").style.display = "none";
@@ -201,8 +235,10 @@ function showLightBox(episodeId){
 
 
 async function fetchInfo(episodeId){
-  const response = await fetch(apiURL + 'episodes/' + episodeId);  
-  const data = await response.json();
+    const response = await fetch(apiURL + 'episodes/' + episodeId); 
+    console.log(response);
+    const data = await response.json();
+
   console.log(data);
 
 
@@ -235,5 +271,6 @@ async function fetchInfo(episodeId){
   document.getElementById("message").innerHTML += "Season: " + season + "<br> <br>"
   document.getElementById("message").innerHTML += "Episode number: " + number + "<br> <br>"
   document.getElementById("message").innerHTML += '<img src="' + imageURL + '" alt = "">'
- 
+
 }
+
