@@ -10,6 +10,7 @@ const STATIC_ASSETS = [
   'tvmaze1/style.css',
   'tvmaze1/apiexample.js',
   'tvmaze1/sw.js',
+  'tvmaze1/manifest.json',
   'tvmaze1/icons/icon512_rounded.png',        
   'tvmaze1/icons/icon512_maskable.png',
   'tvmaze1/tv.jpg'
