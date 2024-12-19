@@ -6,14 +6,14 @@ const DYNAMIC_CACHE_NAME = 'my-app-dynamic-cache-v1';
 // Files to cache during install
 const STATIC_ASSETS = [
   '/', 
-  'tvmaze1/index.html',
-  'tvmaze1/style.css',
-  'tvmaze1/apiexample.js',
-  'tvmaze1/sw.js',
-  'tvmaze1/manifest.json',
-  'tvmaze1/icons/icon512_rounded.png',        
-  'tvmaze1/icons/icon512_maskable.png',
-  'tvmaze1/tv.jpg'
+  'index.html',
+  'style.css',
+  'apiexample.js',
+  'sw.js',
+  'manifest.json',
+  'icons/icon512_rounded.png',        
+  'icons/icon512_maskable.png',
+  'tv.jpg'
   // Add other static files you want to cache
 ];
 
