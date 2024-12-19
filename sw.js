@@ -1,30 +1,3 @@
-const version = 'v125';  // change this everytime you update the service worker
-                          // to force the browser to also update it.
-self.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('my-cache').then(function(cache) {
-      return cache.addAll([
-        '/',
-        'index.html',
-        'style.css',
-        'apiexample.js',
-        'manifest.json',
-        'sw.js',
-        'icons/icon512_rounded.png',
-        'icons/icon512_maskable.png',
-        'tv.jpg'
-      ]);
-    })
-  );
-});
-
-self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
-    })
-  );
-});
 
 // Define cache names
 const CACHE_NAME = 'my-app-cache-v1';
@@ -32,14 +5,14 @@ const DYNAMIC_CACHE_NAME = 'my-app-dynamic-cache-v1';
 
 // Files to cache during install
 const STATIC_ASSETS = [
-  './', 
-  './index.html',
-  './style.css',
-  './apiexample.js',
-  './sw.js',
-  'icons/icon512_rounded.png',        
-  'icons/icon512_maskable.png',
-  'tv.jpg'
+  '/', 
+  'tvmaze1/index.html',
+  'tvmaze1/style.css',
+  'tvmaze1/apiexample.js',
+  'tvmaze1/sw.js',
+  'tvmaze1/icons/icon512_rounded.png',        
+  'tvmaze1/icons/icon512_maskable.png',
+  'tvmaze1/tv.jpg'
   // Add other static files you want to cache
 ];
 
