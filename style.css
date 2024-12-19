@@ -136,39 +136,7 @@ body{
 
 
 
-@media (max-width: 1200px){
-  #title{
-    font-size: 65px;
-    height: 170px;
-  }
-  #btns{
-    margin-top: 0px;
-  }
-}
 
-
-
-
-@media (max-width: 800px) {
-  #button{
-      width: 150px;
-  }
-  #search{
-      width: 200px;
-  }
-  #btns{
-      width: 450px;
-      padding-left: 70px;
-  }
-  #title{
-      font-size: 60px;
-      height: 60px;
-  }
-  #main{
-    margin-top: 190px;
-    
-  }
-}
 
 
 
