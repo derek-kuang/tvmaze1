@@ -8,6 +8,7 @@ self.addEventListener('install', function(event) {
         'index.html',
         'style.css',
         'apiexample.js',
+        'manifest.json',
         'icons/icon512_rounded.png',
         'icons/icon512_maskable.png',
         'tv.jpg'
